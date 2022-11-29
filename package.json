@@ -22,12 +22,18 @@
             "requireCommits": true,
             "tagName": "dinesh-test-${version}",
             "tagMatch": "dinesh-test-[0-9][0-9].[0-1][0-9].[0-9]*",
-            "commitMessage": "chore: release v${version}",
+            "commitMessage": "test: release v${version}",
             "pushArgs": [
               "--follow-tags",
               "--force"
             ],
             "push": true
+        },
+        "plugins": {
+            "@release-it/keep-a-changelog": {
+              "filename": "CHANGELOG.md",
+              "addUnreleased": true
+            }
         }
     }
 }
