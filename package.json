@@ -1,7 +1,7 @@
 {
     "name": "my-package",
     "author": "Testing Github Dinesh",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "main": "index.js",
     "devDependencies": {
         "@release-it/bumper": "3.0.1",
@@ -14,10 +14,10 @@
     },
     "release-it": {
         "npm": {
-          "publish": false
+            "publish": false
         },
         "github": {
-          "release": true
+            "release": true
         },
         "git": {
             "requireCommits": true,
@@ -25,15 +25,15 @@
             "tagMatch": "dinesh-test-[0-9][0-9].[0-1][0-9].[0-9]*",
             "commitMessage": "test: release v${version}",
             "pushArgs": [
-              "--follow-tags",
-              "--force"
+                "--follow-tags",
+                "--force"
             ],
             "push": true
         },
         "plugins": {
             "@release-it/keep-a-changelog": {
-              "filename": "CHANGELOG.md",
-              "addUnreleased": true
+                "filename": "CHANGELOG.md",
+                "addUnreleased": true
             }
         }
     }
