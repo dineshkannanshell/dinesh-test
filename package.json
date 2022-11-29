@@ -6,7 +6,8 @@
     "devDependencies": {
         "@release-it/bumper": "3.0.1",
         "@release-it/keep-a-changelog": "2.3.0",
-        "changelog-parser": "2.8.0"
+        "changelog-parser": "2.8.0",
+        "release-it": "14.12.3"
     },
     "scripts": {
         "release": "release-it"
