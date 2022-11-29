@@ -1,0 +1,47 @@
+name: Prepare release
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch:
+    inputs:
+      increment:
+        description: 'Release type (one of: major | minor | patch | premajor | preminor | prepatch )'
+        required: true
+        default: 'minor'
+
+env:
+  NODE_VERSION: '18.x'
+
+jobs:
+  main-build:
+    name: Prepare and tag release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Add current user name/email as the owner of the change
+        run: |
+          git config --global user.name "dineshkannanshell"
+          git config --global user.email "dinesh.kannan@shell.com"
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Prepare build location
+        run: mkdir -p target
+
+      - name: Prepare and tag the new version
+        run: yarn release-it '${{ github.event.inputs.increment }}' --ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
