@@ -1,5 +1,6 @@
 {
     "name": "my-package",
+    "author": "Testing Github Dinesh",
     "version": "0.0.1",
     "main": "index.js",
     "devDependencies": {
@@ -15,10 +16,7 @@
           "publish": false
         },
         "github": {
-          "release": true,
-          "assets": [
-            "target/DEPLOYMENT.html"
-          ]
+          "release": true
         },
         "git": {
             "requireCommits": true,
