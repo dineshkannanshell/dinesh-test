@@ -10,6 +10,7 @@
     },
     "scripts": {
         "release": "release-it"
+        "changelog": "npx auto-changelog --stdout --commit-limit false --unreleased --template .github/workflows/templates/compact.hbs",
     },
     "release-it": {
         "npm": {
@@ -19,7 +20,6 @@
             "release": true
         },
         "git": {
-            "changelog": "npx auto-changelog --stdout --commit-limit false --unreleased --template .github/workflows/templates/compact.hbs",
             "requireCommits": true,
             "tagName": "dinesh-test-${version}",
             "tagMatch": "dinesh-test-[0-9][0-9].[0-1][0-9].[0-9]*",
