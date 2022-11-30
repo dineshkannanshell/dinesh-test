@@ -24,7 +24,7 @@
             "template": "keepachangelog",
             "unreleased": true,
             "commitLimit": false
-        }
+        },
         "git": {
             "requireCommits": true,
             "tagName": "dinesh-test-${version}",
