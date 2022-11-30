@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 <!-- auto-changelog-above -->
 
+## 0.8.0
+### Fixed
+
+- fix: fixing the template [`c3ae12c`](https://github.com/dineshkannanshell/dinesh-test/commit/c3ae12cd4cb34b872d55353fbf97d57a708a5307)
+
+<!-- auto-changelog-above -->
+
 - 123 Change - adding new github file [`ef0a250`](https://github.com/dineshkannanshell/dinesh-test/commit/ef0a250c7a3dc5c6aa718bc2891f1868f2c78c24)
 - test: release v0.5.0 [`fed3d31`](https://github.com/dineshkannanshell/dinesh-test/commit/fed3d318cad4185a52e56a70ffccce71c992f38b)
 - test: release v0.6.0 [`3bb46f6`](https://github.com/dineshkannanshell/dinesh-test/commit/3bb46f6efd34ec36aba783434eac9186abf73d70)
