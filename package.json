@@ -9,8 +9,13 @@
         "release-it": "14.12.3"
     },
     "scripts": {
-        "version": "auto-changelog -p && git add CHANGELOG.md",
         "release": "release-it"
+    },
+    "auto-changelog": {
+        "output": "CHANGELOG.md",
+        "template": "keepachangelog",
+        "unreleased": true,
+        "commitLimit": false
     },
     "release-it": {
         "npm": {
@@ -18,12 +23,6 @@
         },
         "github": {
             "release": true
-        },
-        "auto-changelog": {
-            "output": "CHANGELOG.md",
-            "template": "keepachangelog",
-            "unreleased": true,
-            "commitLimit": false
         },
         "git": {
             "requireCommits": true,
