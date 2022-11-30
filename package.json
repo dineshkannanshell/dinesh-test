@@ -9,8 +9,8 @@
         "release-it": "14.12.3"
     },
     "scripts": {
-        "release": "release-it"
-        "changelog": "npx auto-changelog --stdout --commit-limit false --unreleased --template .github/workflows/templates/compact.hbs",
+        "release": "release-it",
+        "changelog": "npx auto-changelog --stdout --commit-limit false --unreleased --template .github/workflows/templates/compact.hbs"
     },
     "release-it": {
         "npm": {
