@@ -10,7 +10,7 @@
     },
     "scripts": {
         "release": "release-it",
-        "changelog": "npx auto-changelog --stdout --commit-limit false --unreleased --template .github/workflows/templates/compact.hbs"
+        "changelog": "npx auto-changelog --stdout --commit-limit false --unreleased"
     },
     "release-it": {
         "npm": {
