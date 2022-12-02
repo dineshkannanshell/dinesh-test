@@ -13,7 +13,9 @@
     },
     "auto-changelog": {
         "output": "HISTORY.md",
-        "unreleased": true
+        "template": "keepachangelog",
+        "unreleased": true,
+        "commitLimit": false
     },
     "release-it": {
         "npm": {
