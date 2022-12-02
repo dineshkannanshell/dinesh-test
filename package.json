@@ -11,11 +11,6 @@
     "scripts": {
         "release": "release-it"
     },
-    "auto-changelog": {
-        "output": "HISTORY.md",
-        "unreleased": true,
-        "commitLimit": false
-    },
     "release-it": {
         "npm": {
             "publish": false
@@ -24,6 +19,7 @@
             "release": true
         },
         "git": {
+            "changelog": "npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/master/templates/changelog-compact.hbs"
             "requireCommits": true,
             "tagName": "dinesh-test-${version}",
             "tagMatch": "dinesh-test-[0-9][0-9].[0-1][0-9].[0-9]*",
