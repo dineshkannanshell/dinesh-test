@@ -10,7 +10,7 @@
     },
     "scripts": {
         "release": "release-it",
-        "changelog": "npx auto-changelog --stdout --commit-limit false --unreleased"
+        "version": "auto-changelog -p && git add CHANGELOG.md"
     },
     "release-it": {
         "npm": {
