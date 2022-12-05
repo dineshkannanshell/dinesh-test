@@ -1,7 +1,7 @@
 {
     "name": "my-package",
     "author": "Testing Github Dinesh",
-    "version": "0.33.0",
+    "version": "0.34.0",
     "main": "index.js",
     "devDependencies": {
         "@release-it/bumper": "3.0.1",
