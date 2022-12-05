@@ -11,6 +11,12 @@
     "scripts": {
         "release": "release-it"
     },
+    "auto-changelog": {
+        "output": "CHANGELOG.md",
+        "template": ".github/workflows/templates/compact.hbs",
+        "unreleased": true,
+        "commitLimit": false
+    },
     "release-it": {
         "npm": {
             "publish": false
