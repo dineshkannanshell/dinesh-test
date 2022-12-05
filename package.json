@@ -28,6 +28,9 @@
                 "--force"
             ],
             "push": true
+        },
+        "hooks": {
+            "after:bump": "npx auto-changelog -p"
         }
     }
 }
