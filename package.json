@@ -31,7 +31,7 @@
             "push": true
         },
         "hooks": {
-            "after:bump": "npx auto-changelog --unreleased-only"
+            "after:bump": "npx auto-changelog -p"
         }
     }
 }
