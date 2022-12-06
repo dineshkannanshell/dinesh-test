@@ -14,7 +14,7 @@
     "auto-changelog": {
         "output": "CHANGELOG.md",
         "template": ".github/workflows/templates/compact.hbs",
-        "unreleased": true,
+        "unreleased-only": true,
         "commitLimit": false
     },
     "release-it": {
