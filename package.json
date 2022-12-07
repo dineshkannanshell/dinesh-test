@@ -30,7 +30,7 @@
             "push": true
         },
         "hooks": {
-            "after:bump": "npx auto-changelog --commit-limit false --unreleased-only"
+            "after:bump": "npx auto-changelog --latest-version version"
         }
     }
 }
