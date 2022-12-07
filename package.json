@@ -31,7 +31,7 @@
             "push": true
         },
         "hooks": {
-            "after:bump": "npx auto-changelog -p --starting-version ${latestTag}"
+            "after:bump": "npx auto-changelog -p --starting-version ${lastVersion}"
         }
     }
 }
