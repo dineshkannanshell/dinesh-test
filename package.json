@@ -19,7 +19,6 @@
             "release": true
         },
         "git": {
-            "changelog": "npx auto-changelog --stdout --commit-limit false --unreleased-only --template .github/workflows/templates/compact.hbs",
             "requireCommits": true,
             "tagName": "dinesh-test-${version}",
             "tagMatch": "dinesh-test-[0-9][0-9].[0-1][0-9].[0-9]*",
@@ -31,7 +30,7 @@
             "push": true
         },
         "hooks": {
-            "after:bump": "npx auto-changelog -p"
+            "after:bump": "npx auto-changelog --commit-limit false --unreleased-only"
         }
     }
 }
