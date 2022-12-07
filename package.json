@@ -31,7 +31,7 @@
             "push": true
         },
         "hooks": {
-            "after:bump": "npx auto-changelog -p --starting-version dinesh-test-${lastVersion}"
+            "after:bump": "npx auto-changelog -p --starting-version ${latestTag}"
         }
     }
 }
