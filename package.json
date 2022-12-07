@@ -30,7 +30,7 @@
             "push": true
         },
         "hooks": {
-            "after:bump": "npx auto-changelog -p --starting-version dinesh-test-0.52.0"
+            "after:bump": "npx auto-changelog -p --tag-prefix dinesh-test-"
         }
     }
 }
