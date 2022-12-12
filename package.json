@@ -19,7 +19,7 @@
             "release": true
         },
         "git": {
-            "changelog": "npx auto-changelog --stdout -p --commit-limit false --unreleased-only --tag-prefix dinesh-test- --starting-version ${latestTag}",
+            "changelog": "npx auto-changelog --stdout --release-version --commit-limit false --unreleased-only --tag-prefix dinesh-test- --starting-version ${latestTag}",
             "requireCommits": true,
             "tagName": "dinesh-test-${version}",
             "tagMatch": "dinesh-test-[0-9][0-9].[0-1][0-9].[0-9]*",
