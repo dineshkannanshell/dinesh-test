@@ -1,2 +1,2 @@
 This is a test project. Testing the auto-changelog from release-it.
-3001 comment
+  1. 3001 comment
