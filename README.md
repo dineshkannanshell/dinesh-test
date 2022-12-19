@@ -5,3 +5,4 @@ This is a test project. Testing the auto-changelog from release-it.
   4. 4004-branch4 new
   5. 4005-branch5 new
   6. 4006-branch6 new
+  7. 4007-branch7 aaa
