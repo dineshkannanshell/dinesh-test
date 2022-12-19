@@ -3,3 +3,4 @@ This is a test project. Testing the auto-changelog from release-it.
   2. 4002-branch2
   3. 4003-branch3
   4. 4004-branch4 new
+  5. 4005-branch5 new
