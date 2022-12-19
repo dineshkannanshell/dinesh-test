@@ -7,3 +7,4 @@ This is a test project. Testing the auto-changelog from release-it.
   6. 4006-branch6 new
   7. 4007-branch7 aaa
   8. 4008-branch8 aaa
+  9. 4009-branch9 bbb
