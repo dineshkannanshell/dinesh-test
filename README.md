@@ -6,3 +6,4 @@ This is a test project. Testing the auto-changelog from release-it.
   5. feature/556409-new-global-path
   6. feature/554549-fix-page-header-variants-prod-issue
   7. feature/555295-reduce-dispatcher-cache-pressure-from-flushes
+  8. feature/542057-low-carbon-mode-updates
