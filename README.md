@@ -4,3 +4,4 @@ This is a test project. Testing the auto-changelog from release-it.
   3. feature/540431-msds-functionality-updates
   4. feature/488286-automated-audit-purge
   5. feature/556409-new-global-path
+  6. feature/554549-fix-page-header-variants-prod-issue
