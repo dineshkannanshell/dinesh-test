@@ -42,6 +42,6 @@ jobs:
         run: mkdir -p target
 
       - name: Prepare and tag the new version
-        run: yarn release-it '${{ github.event.inputs.increment }}' --ci
+        run: yarn release-it '${{ github.event.inputs.increment }}' --ci --dry-run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
