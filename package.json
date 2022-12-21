@@ -9,7 +9,7 @@
         "release-it": "14.12.3"
     },
     "scripts": {
-        "release": "release-it"
+        "release": "release-it --dry-run"
     },
     "release-it": {
         "npm": {
