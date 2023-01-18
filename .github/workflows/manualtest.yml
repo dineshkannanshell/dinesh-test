@@ -1,0 +1,63 @@
+name: send input to Reusable workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment_to_run_on:
+        description: 'NPE Environment'
+        type: choice
+        options:
+          - 'npe01'
+          - 'npe02'
+          - 'npe03'
+          - 'npe04'
+          - 'npe05'
+          - 'npe06'
+          - 'npe07'
+          - 'npe08'
+          - 'npe09'
+          - 'npe10'
+          - 'npe11'
+          - 'npe12'
+          - 'npe13'
+          - 'npe14'
+          - 'npe15'
+          - 'npe16'
+          - 'npe17'
+          - 'npe18'
+          - 'npe19'
+          - 'npe20'
+          - 'preproduction'
+          - 'production'
+        required: true
+      scope:
+        description: 'Scope'
+        default: 'runtime'
+        required: true
+      browsers:
+        description: 'Browsers'
+        type: choice
+        options:
+          - 'chrome'
+          - 'firefox'
+          - 'chrome,firefox'
+        default: 'chrome'
+        required: true
+      concurrency:
+        description: 'Concurrency'
+        default: 4
+        required: true
+      timeout:
+        description: 'Timeout'
+        default: 30000
+        required: true
+jobs:
+  job1:
+    name: workflow inputs
+    uses: ./.github/workflows/reusable-test.yml
+    with:
+      environment_to_run_on: ${{ github.event.inputs.environment_to_run_on }}
+      scope: ${{ github.event.inputs.scope }}
+      browsers: ${{ github.event.inputs.browsers }}
+      concurrency: ${{ github.event.inputs.concurrency }}
+      timeout: ${{ github.event.inputs.timeout}}
