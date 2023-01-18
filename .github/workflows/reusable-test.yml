@@ -1,0 +1,34 @@
+name: Reusable workflow
+
+on:
+  workflow_call:
+    inputs:
+      environment_to_run_on:
+        required: true
+        type: string
+      scope:
+        description: 'Scope'
+        required: true
+        type: string
+      browsers:
+        description: 'Browsers'
+        required: true
+        type: string
+      concurrency:
+        type: string
+      timeout:
+        type: string
+
+jobs:
+  test:
+    name: Getting input
+    runs-on: ubuntu-latest
+        
+    steps:
+      - name: display input value
+        run: |
+          echo ${{inputs.environment_to_run_on}}
+          echo ${{ inputs.scope}}
+          echo ${{inputs.browsers}}
+          echo ${{inputs.concurrency}}
+          echo ${{inputs.timeout}}
