@@ -73,13 +73,13 @@ jobs:
           # For posting a rich message using Block Kit
           payload: |
             {
-              "text": "GitHub Action build result1: ${{ needs.*.result }}",
+              "text": "GitHub Action build result1: ${(needs.check-semaphor.result == success)}",
               "blocks": [
                 {
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "GitHub Action build result2: ${{ needs.*.result }}"
+                    "text": "GitHub Action build result2: ${(needs.check-semaphor.result == success)}"
                   }
                 }
               ]
