@@ -63,6 +63,8 @@ jobs:
       timeout: ${{ github.event.inputs.timeout}}
       
   job2:
+    needs: job1
+    runs-on: ubuntu-latest
     steps:
       - name: Send custom JSON data to Slack workflow
         id: slack
@@ -71,13 +73,13 @@ jobs:
           # For posting a rich message using Block Kit
           payload: |
             {
-              "text": "GitHub Action build result1: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
+              "text": "GitHub Action build result1: ${{ needs.job1.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
               "blocks": [
                 {
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "GitHub Action build result2: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
+                    "text": "GitHub Action build result2: ${{ needs.job1.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
                   }
                 }
               ]
