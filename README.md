@@ -1,3 +1,3 @@
 This is a test project. Testing the auto-changelog from release-it. 
 
-1. new change1
+1. 555644-amidala-redirect-functionality
