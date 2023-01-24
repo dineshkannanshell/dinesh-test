@@ -65,6 +65,7 @@ jobs:
   job2:
     needs: job1
     runs-on: ubuntu-latest
+    if: success()
     steps:
       - name: Send custom JSON data to Slack workflow
         id: slack
