@@ -3,3 +3,4 @@
 [AB#574097] Cleanup hosts from rewrites file
 [AB#576278] Atomic CSS sonar issues
 [AB#563460] Whitelist various German sites
+[AB#389406] Upgrade SiteImprove version 
