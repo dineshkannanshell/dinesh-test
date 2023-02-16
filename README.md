@@ -4,4 +4,4 @@
 [AB#576278] Atomic CSS sonar issues
 [AB#563460] Whitelist various German sites
 [AB#389406] Upgrade SiteImprove version 
-[AB#556253] DOM mutation hash issues
+[AB#556253] DOM mutation hash issue
