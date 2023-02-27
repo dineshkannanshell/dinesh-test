@@ -31,7 +31,7 @@
             "push": true
         },
         "hooks": {
-            "after:bump": "yarn auto-changelog --commit-limit false --tag-prefix dinesh-test- --latest-version dinesh-test-${version} --starting-version dinesh-test-${version} --template keepachangelog"
+            "after:bump": "yarn auto-changelog --commit-limit false --unreleased-only --tag-prefix dinesh-test- --latest-version dinesh-test-${version} --template keepachangelog"
         }
     }
 }
