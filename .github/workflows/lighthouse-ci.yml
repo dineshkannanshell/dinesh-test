@@ -1,9 +1,7 @@
 name: Lighthouse CI
 on:
-  push:
-    branches: ["main", "master", "develop"]
-  pull_request:
-    branches: ["main", "master", "develop"]
+  workflow_dispatch:
+  
 env:
   NODE_VERSION: "18.x"
   REMOTE_URL: "https://npe20.shell.co.uk/"
