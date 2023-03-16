@@ -1,36 +1,22 @@
 name: Lighthouse CI
-on:
-  workflow_dispatch:
-  
-env:
-  NODE_VERSION: "18.x"
-  REMOTE_URL: "https://npe20.shell.co.uk/"
-  DEV_HOSTNAME: localhost
-  DEV_PORT: 3000
-  MODE: production
+on: [push]
 jobs:
-  lighthouse-lhci:
-    name: Lighthouse CI
+  lhci:
+    name: Lighthouse
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
         with:
-          node-version: ${{ env.NODE_VERSION }}
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
       - name: npm install, build
         run: |
           npm install
-          npm run build
       - name: run Lighthouse CI
         run: |
-          npm install -g @lhci/cli
-          lhci autorun \
-          --config=./.github/lighthouse/config/.lighthouserc.js \
-          || echo "LHCI failed!"
-      - name: Upload LHCI reports
-        uses: actions/upload-artifact@v3.1.0
-        with:
-          name: Lighthouse Reports
-          path: ./.github/lighthouse/reports/**
-          retention-days: 2
+          npm install -g @lhci/cli@0.11.x
+          lhci autorun
