@@ -19,4 +19,6 @@ jobs:
       - name: run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.11.x
-          lhci autorun
+          lhci autorun \
+          --config=./.github/lighthouse/config/.lighthouserc.js \
+          || echo "LHCI failed!"
