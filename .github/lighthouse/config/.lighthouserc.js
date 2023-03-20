@@ -1,5 +1,8 @@
 module.exports = {
   ci: {
+    collect: {
+      url: ['https://npe20.shell.co.uk/'],
+    },
     assert: {
       "assertions": {
         "first-contentful-paint": ["warn", {"maxNumericValue": 4000}],
@@ -9,8 +12,9 @@ module.exports = {
         "resource-summary:third-party:count": ["warn", {"maxNumericValue": 5}]
       },
     },
-    collect: {
-      url: ['https://npe20.shell.co.uk/'],
+    upload: {
+      target: "filesystem",
+      outputDir: ".github/lighthouse/reports/",
     },
   },
 };
