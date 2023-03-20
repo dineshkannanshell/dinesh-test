@@ -12,9 +12,5 @@ module.exports = {
         "resource-summary:third-party:count": ["warn", {"maxNumericValue": 5}]
       },
     },
-    upload: {
-      target: "filesystem",
-      outputDir: ".github/lighthouse/reports/",
-    },
   },
 };
